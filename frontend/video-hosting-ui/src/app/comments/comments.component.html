@@ -1,0 +1,32 @@
+<div class="comment-section" >
+  <form class="comment-form" [formGroup]="commentsForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput [formControlName]="'comment'"
+                placeholder="Share your thoughts"></textarea>
+    </mat-form-field>
+    <div class="comment-buttons">
+      <button mat-button color="black" class="cancel-button" (click)="clearComment()">CANCEL</button>
+      <button type="submit" mat-button color="primary" (click)="postComment()" class="comment-button">COMMENT</button>
+    </div>
+  </form>
+  <mat-divider></mat-divider>
+  <div class="view-comments" *ngFor="let comment of commentsDto">
+    <div class="comment">
+      <div class="comment-details">
+        <div class="comment-avatar"></div>
+        <div class="comment-info">
+          <a class="comment-author" href="#">User</a>
+          <p class="comment-date">1 Month Ago</p>
+        </div>
+      </div>
+      <div class="comment-content">
+        <p>{{comment.commentText}}</p>
+      </div>
+      <button mat-icon-button class="delete-comment-button">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+
+  </div>
+</div>

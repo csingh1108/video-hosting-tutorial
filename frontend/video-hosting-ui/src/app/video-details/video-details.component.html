@@ -1,0 +1,53 @@
+<div fxLayout="row">
+  <div fxFlex="5%"></div>
+  <div fxFlex="60%" class="video-detail">
+    <app-video-player *ngIf="videoAvailable" [videoUrl]="videoUrl"></app-video-player>
+    <div class="mat-title">{{videoTitle}}</div>
+    <mat-divider></mat-divider>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <mat-card-header fxLayout="row">
+        <span fxLayout="column">
+        <mat-card-title>CJSingh </mat-card-title>
+        <mat-card-subtitle class="subtitles">4.5k Subscribers</mat-card-subtitle></span>
+        <span class="subscribe-buttons">
+        <button *ngIf="showSubscribeButton" class="subscribe-button" mat-raised-button color="warn" (click)="subscribeToUser()">Subscribe</button>
+        <button *ngIf="showUnsubscribeButton" class="subscribe-button-on-click" mat-raised-button color="accent" (click)="unSubscribeToUser()">Subscribed</button></span>
+      </mat-card-header>
+      <span fxLayoutAlign="end" class="likes-dislikes">
+        <button mat-icon-button class="thumbs-up" fxLayout="row" (click)="likeVideo()">
+          <span><mat-icon>thumb_up_off_alt</mat-icon></span>
+          <span class="count">{{likeCount}}</span>
+        </button>
+
+        <button mat-icon-button class="thumbs-down" fxLayout="row" (click)="dislikeVideo()">
+
+          <span><mat-icon>thumb_down_off_alt</mat-icon></span>
+          <span class="count">{{dislikeCount}}</span>
+        </button>
+      </span>
+    </div>
+    <hr>
+    <div class="video-meta-details" fxLayout="row">
+      <div  fxFlex="50%" class="separator-container">
+        <span class="view-count">Views: {{viewCount}}</span>
+        <span class="separator"></span>
+        <span class="video-upload-date">22nd July 2023</span>
+      </div>
+    </div>
+
+    <div class="video-description">{{videoDescription}}</div>
+    <hr>
+    <mat-divider></mat-divider>
+    <mat-chip-listbox>
+      <div *ngFor="let tag of tags">
+      <mat-chip-option [value]="tag">{{tag}}</mat-chip-option></div>
+    </mat-chip-listbox>
+    <mat-divider></mat-divider>
+    <app-comments [videoId]="videoId"></app-comments>
+  </div>
+  <div fxFlex="5%"></div>
+  <div fxFlex="30%">
+    Suggestions Bar
+  </div>
+</div>
+

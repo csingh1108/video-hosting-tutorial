@@ -1,0 +1,11 @@
+<mat-card class="example-card" routerLink="/video-details/{{video.id}}">
+  <img mat-card-image [src]="video.thumbnailUrl" alt="Thumbnail of video">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title class="video-title">{{video.title}}</mat-card-title>
+    <mat-card-subtitle>Uploaded by: user</mat-card-subtitle>
+    <mat-card-subtitle>{{video.description}}</mat-card-subtitle>
+    <mat-card-subtitle>Views: 800</mat-card-subtitle>
+  </mat-card-header>
+
+</mat-card>

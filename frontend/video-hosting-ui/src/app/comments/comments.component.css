@@ -1,0 +1,69 @@
+.comment-section {
+  min-width: 150px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.comment-form {
+  margin-bottom: 20px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.comment-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.cancel-button {
+  margin-right: 10px;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.comment-details {
+  display: flex;
+}
+
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  background-image: url('https://yt3.ggpht.com/ytc/AAUvwnjuYQrnTYr-sXVEBvCAmtT4nxF-3yhh5KnP0W6xmQ=s176-c-k-c0x00ffffff-no-rj');
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comment-author {
+  font-weight: lighter;
+  font-size: medium;
+  text-decoration: none;
+}
+
+.comment-date {
+  font-size: small;
+  color: gray;
+}
+
+.comment-content {
+  margin-left: 50px;
+}
+
+.delete-comment-button {
+  padding: 0;
+  margin: 0;
+  align-self: flex-start;
+}
